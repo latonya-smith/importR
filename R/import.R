@@ -65,7 +65,8 @@ import <- function(file, ...){
  }
 
  else if(extension == "json"){
-  dataset <- rjson::fromJSON(file, ...)
+  mydata <- rjson::fromJSON(file, ...)
+  dataset<- as.data.frame(mydata)
  }
 
  else {
