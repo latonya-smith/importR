@@ -18,6 +18,7 @@
 #' read_dta,
 #' read_spss,
 #' read_excel,
+#' fromJSON,
 #' vroom
 #'
 #' @param file datafile to import
@@ -27,6 +28,7 @@
 #' @import readxl
 #' @import vroom
 #' @import tools
+#' @import rjson
 #'
 #' @export
 #' @return a dataframe
@@ -60,6 +62,10 @@ import <- function(file, ...){
 
  else if(extension == "dta") {
   dataset <- haven::read_dta(file, ...)
+ }
+
+ else if(extension == "json"){
+  dataset <- rjson::fromJSON(file, ...)
  }
 
  else {

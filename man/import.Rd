@@ -15,18 +15,21 @@ import(file, ...)
 a dataframe
 }
 \description{
-This import function can import data from
+This \code{import} function can import data from
 delimited text files, EXCEL spreadsheets, and
 statistical packages such as SAS, SPSS, and Stata.
 }
 \details{
-The import function is a wrapper for the haven, readxl,
-and vroom packages.
+The import function is a wrapper for the
+\href{https://haven.tidyverse.org/}{haven},
+\href{https://readxl.tidyverse.org/}{readxl},
+and \href{https://github.com/r-lib/vroom}{vroom} packages.
 }
 \seealso{
 read_sas,
 read_dta,
 read_spss,
 read_excel,
+fromJSON,
 vroom
 }
